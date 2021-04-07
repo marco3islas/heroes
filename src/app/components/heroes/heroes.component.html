@@ -1,0 +1,10 @@
+<div class="container-fluid">
+
+<h1 class="my-3">Heroes <small>Maravel y DC</small></h1>
+<hr class="mb-4">
+<!---->
+    <!-- tarjetas -->
+    <div class="card-columns animated fadeIn fast">
+      <app-tarjeta [hero]="hero" [index]="i" *ngFor="let hero of heroes; let i = index"></app-tarjeta>
+    </div>
+</div>

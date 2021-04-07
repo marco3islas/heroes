@@ -1,0 +1,25 @@
+<h1 class="mt-3">Buscar: {{buscando}}</h1>
+<hr>
+
+<div class=" alert alert-danger my-3 aviso" *ngIf="termino.length < 1">
+  <p>El termino {{buscando}} no se encuentra en la base de datos.</p>
+</div>
+<div class="container animated fadeIn" *ngFor=" let heroe of termino">
+  <div class="tarjeta animated fadeIn fast">
+    <img [src]="heroe.img" class='img-fluid animated fadeIn' [alt]="termino.nombre">
+    <div class="text">
+      <div class="casa animated fadeIn fast" >
+        <img *ngIf="heroe.casa == 'Marvel'" src="./assets/img/marvelAzul.png" alt="Logo de Marvel">
+        <img *ngIf="heroe.casa == 'DC'" src="./assets/img/dc.png" alt="Logo de DC">
+      </div>
+      <h3 class="titulo"> {{ heroe.nombre | uppercase }}</h3>
+      <hr>
+      
+      <h5>Primera aparicion: {{ heroe.aparicion | date : 'yyyy'  }}</h5>
+      <div class="descripcion">
+        <p>{{ heroe.bio }}</p>
+      </div>
+        <a class="btn btn-danger btn-block" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+  </div>
+</div>

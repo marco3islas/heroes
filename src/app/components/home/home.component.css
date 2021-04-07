@@ -1,0 +1,8 @@
+.card-img-top{
+    max-height: 261px;
+    min-height: 261px;
+}
+.card-img-top:hover{
+    filter: drop-shadow(0 0 4px dodgerblue);
+    
+}

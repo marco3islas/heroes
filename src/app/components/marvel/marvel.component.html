@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <!-- Buscardor de marvel -->
+  <div class="input-group mb-3 ">
+    <span class="input-group-text" id="basic-addon1"><img src='../../../assets/img/mask-solid.svg' style='width: 40px;'></span>
+    <input type="text" #encontrar (keyup)="buscar(encontrar.value)" class="bg-outlet-success form-control" placeholder="Encontrar personaje de Marvel..." aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+
+  <!-- Tarjeta del resulstado del buscador  de marvel -->
+
+
+  <div class="card-group row justify-content-start">
+  <div *ngFor="let heroe of heroes" class="col-sm-6 col-md-4 col-lg-3">
+    <img src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}" class="card-img-top" alt="{{heroe.name}}">
+    <div class="card-body">
+      <h5 class="card-title"> {{ heroe.name }}</h5>
+      <a href="{{ heroe.urls[1].url }}"
+        target='_blank' class="badge rounded-pill bg-danger">Wiki</a>
+      <a href="{{ heroe.urls[0].url }}"
+        target='_blank' class="badge rounded-pill bg-primary">Comics</a>
+      <p> <small class="text-muted">Primera aparicion: {{ heroe.modified | date }}</small></p>
+    </div>
+  </div>
+</div>
+</div>
+

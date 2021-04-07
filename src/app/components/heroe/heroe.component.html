@@ -1,0 +1,20 @@
+
+<div class="container animated fadeIn" *ngIf='heroe'>
+  <div class="tarjeta animated fadeIn fast">
+    <img [src]="heroe.img" class='img-fluid animated fadeIn' [alt]="heroe.nombre">
+    <div class="text">
+      <div class="casa animated fadeIn fast" >
+        <img *ngIf="heroe.casa == 'Marvel'" src="./assets/img/marvelAzul.png" alt="Logo de Marvel">
+        <img *ngIf="heroe.casa == 'DC'" src="./assets/img/dc.png" alt="Logo de DC">
+      </div>
+      <h3 class="titulo"> {{ heroe.nombre | uppercase }}</h3>
+      <hr>
+      
+      <h5>Primera aparicion: {{ heroe.aparicion | date : 'yyyy'  }}</h5>
+      <div class="descripcion">
+        <p>{{ heroe.bio }}</p>
+      </div>
+        <a class="btn btn-danger btn-block" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+  </div>
+</div>
