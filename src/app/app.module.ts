@@ -16,27 +16,23 @@ import {MarvelAppService} from './servicios/marvel-app.service';
 // Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
-import { SuperHeroComponent } from './components/super-hero/super-hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
     BuscarComponent,
     TarjetaComponent,
     MarvelComponent,
-    SuperHeroComponent,
   ],
   imports: [
     BrowserModule,
