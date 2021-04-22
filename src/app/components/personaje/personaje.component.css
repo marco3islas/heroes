@@ -1,0 +1,11 @@
+h3{
+    color: white;
+    margin: 15px 0;
+}
+.imagen{
+    width: 200px;
+    border-radius: 8px;
+}
+.col-3{
+    border: 1px solid blue;
+}

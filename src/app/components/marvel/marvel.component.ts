@@ -11,14 +11,19 @@ import {MarvelAppService} from 'src/app/servicios/marvel-app.service';
 export class MarvelComponent implements OnInit {
 
     heroes: any [] = [];
+    loading: boolean;
 
 
   constructor( private marvel: MarvelAppService,
                private router: Router) {
+
+      this.loading = true;
+
       this.marvel.getHeroes()
       .subscribe(( resp:any ) =>{
-          console.log(resp.data.results);
+          console.log(resp.data);
           this.heroes = resp.data.results;
+          this.loading = false;
       });
 
   }
@@ -33,7 +38,12 @@ export class MarvelComponent implements OnInit {
     irDetalles( encontrar: string){
         this.router.navigate(['/heroe', encontrar]);
     }
+    verPersonaje( heroe: any ){
 
+        const id = heroe.id;
+        console.log(id);
+        this.router.navigate(['/personaje', id]);
+    }
   ngOnInit(): void {
   }
 

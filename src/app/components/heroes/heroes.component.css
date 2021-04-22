@@ -4,3 +4,19 @@
   flex-flow: row wrap;
   justify-content: space-around;
 }
+
+.container-fluid .tituloBuscar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-fluid .tituloBuscar .buscar{
+    width: 300px;
+    display: flex;
+    height: 40px;
+} 
+.container-fluid .tituloBuscar .buscar input{
+    width: 60%;
+}

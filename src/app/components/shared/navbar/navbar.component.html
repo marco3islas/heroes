@@ -16,10 +16,6 @@
           <a class="nav-link" [routerLink] = "['heroes']">Heroes</a>
         </li>
       </ul>
-      <div class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar Heroe" (keyup.enter)='buscarHeroe(buscarTexto.value)' #buscarTexto aria-label="Search">
-        <button (click)="buscarHeroe(buscarTexto.value)" class="btn btn-outline-primary" type="button">Buscar</button>
-      </div>
     </div>
   </div>
 </nav>

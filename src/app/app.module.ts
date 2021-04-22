@@ -22,6 +22,11 @@ import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 import { MarvelComponent } from './components/marvel/marvel.component';
+import { PersonajeComponent } from './components/personaje/personaje.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { NodescripcionPipe } from './pipes/nodescripcion.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,10 @@ import { MarvelComponent } from './components/marvel/marvel.component';
     BuscarComponent,
     TarjetaComponent,
     MarvelComponent,
+    PersonajeComponent,
+    LoadingComponent,
+    NoimagePipe,
+    NodescripcionPipe,
   ],
   imports: [
     BrowserModule,

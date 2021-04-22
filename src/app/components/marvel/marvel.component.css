@@ -7,3 +7,9 @@
     filter: drop-shadow(0 0 4px dodgerblue);
     
 }
+.puntero{
+    cursor: pointer;
+}
+h5{
+    color: white;
+}
