@@ -1,0 +1,1 @@
+body{background-color:#242222}body h1,body hr{color:#fff}body p{color:grey}.animated{animation-duration:1s;animation-fill-mode:both}.fast{animation-duration:.4s;animation-fill-mode:both}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}.fadeIn{animation-name:fadeIn}
