@@ -1,11 +1,18 @@
-h3{
+h3, h5{
     color: white;
     margin: 15px 0;
 }
+.descripcion {
+   max-height: 150px; 
+   overflow-y: auto;
+}
 .imagen{
-    width: 200px;
+    width: 150px;
     border-radius: 8px;
 }
 .col-3{
     border: 1px solid blue;
+}
+.comic {
+    width: 150px;
 }

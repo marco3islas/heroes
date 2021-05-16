@@ -4,7 +4,7 @@
 <div class="row container-fluid">
   <div class="col-12 col-md-4">
     <h1 class="text-light">{{ personaje.name }}</h1>
-    <img src="{{ personaje.thumbnail.path }}.{{personaje.thumbnail.extension }}" class="text-center my-4 imagen img-thumbnail" alt="{{ personaje.name }}">
+      <img src="{{ personaje.thumbnail.path }}.{{ personaje.thumbnail.extension }} " class="text-center my-4 imagen img-thumbnail" alt="{{ personaje.name }}">
     
   </div>
   <div class="col-12 col-md-8">
@@ -12,14 +12,25 @@
     <p class="text-muted"> {{ personaje.description | nodescripcion }}</p>
     <button class="btn col-12  btn-primary my-2" routerLink="/marvel" ><i class="fa fa-chevron-left"></i> Regresar</button>
   </div>
-  <div class="col-8">
-  </div>
   <div class="container">
-    <h3 class="my-3">Algunos Comics de {{ personaje.name }}</h3>
+
+    <h5 class="my-5"> <small>Algunos Comics de: </small>  {{ personaje.name | uppercase }}</h5>
+
+      <!-- Loading -->
+
+      <app-loading class="m-5 text-center text-light" *ngIf="loading"></app-loading>
+
     <div class="row" *ngFor="let comic of comics">
+
       <div class="col-sm">
-        <p class='text-light'>{{ comic.title}}</p>
-        <p>Numero de paginas: {{comic.pageCount}}</p>
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <img (click)="verComic()" class="comic" src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}" alt="">
+          </div>
+          <div class="col-12 col-sm-9">
+            <h6 class='text-light my-3'>{{ comic.title}}</h6>
+          </div>
+        </div>
       <hr>
       
     </div>

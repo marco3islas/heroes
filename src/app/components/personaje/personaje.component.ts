@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {MarvelAppService} from 'src/app/servicios/marvel-app.service';
 
 @Component({
@@ -10,12 +10,13 @@ import {MarvelAppService} from 'src/app/servicios/marvel-app.service';
 export class PersonajeComponent {
 
     personaje: any = {};
-    comics: any  = {};
+    comics: any [] = [];
 
     loading: boolean;
 
   constructor( private router: ActivatedRoute,
                private heroe: MarvelAppService,
+               private ruteador: Router
   ) {
 
       this.loading = true;
@@ -35,15 +36,20 @@ export class PersonajeComponent {
         .subscribe( ( personaje: any ) =>{
             this.personaje = personaje;
             console.log(personaje);
-            this.comics = personaje.comics.items;
+            this.comics = personaje;
         });
     }
 
     getComics( id: string){
         this.heroe.getComics(id)
         .subscribe(( comics: any) =>{
+      this.loading = true;
             this.comics = comics;
             console.log(comics);
+      this.loading = false;
         });
+    }
+    verComic(){
+        this.ruteador.navigate(['/comic']);
     }
 }

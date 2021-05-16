@@ -27,6 +27,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { NodescripcionPipe } from './pipes/nodescripcion.pipe';
+import { ComicComponent } from './components/personaje/comic/comic.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NodescripcionPipe } from './pipes/nodescripcion.pipe';
     LoadingComponent,
     NoimagePipe,
     NodescripcionPipe,
+    ComicComponent,
   ],
   imports: [
     BrowserModule,

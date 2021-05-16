@@ -12,10 +12,10 @@
         <img *ngIf="heroe.casa == 'Marvel'" src="./assets/img/marvelAzul.png" alt="Logo de Marvel">
         <img *ngIf="heroe.casa == 'DC'" src="./assets/img/dc.png" alt="Logo de DC">
       </div>
-      <h3 class="titulo"> {{ heroe.nombre | uppercase }}</h3>
+      <h3 class="titulo text-light"> {{ heroe.nombre | uppercase }}</h3>
       <hr>
       
-      <h5>Primera aparicion: {{ heroe.aparicion | date : 'yyyy'  }}</h5>
+      <h5 class="text-info">Primera aparicion: {{ heroe.aparicion | date : 'yyyy'  }}</h5>
       <div class="descripcion">
         <p>{{ heroe.bio }}</p>
       </div>

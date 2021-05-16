@@ -28,10 +28,8 @@ export class MarvelComponent implements OnInit {
 
   }
     buscar(encontrar: string){
-        console.log(encontrar);
         this.marvel.getMarvelPersonaje(encontrar)
         .subscribe( (data: any) =>{
-            console.log(data.data.results);
             this.heroes = data.data.results;
         });
     }
@@ -41,7 +39,6 @@ export class MarvelComponent implements OnInit {
     verPersonaje( heroe: any ){
 
         const id = heroe.id;
-        console.log(id);
         this.router.navigate(['/personaje', id]);
     }
   ngOnInit(): void {
